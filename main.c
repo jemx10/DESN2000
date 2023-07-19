@@ -5,7 +5,7 @@
 #include <time.h>
 
 void main() {
-
+    printf("Hello, fellow team members\n");
     return 0;
 }
 
