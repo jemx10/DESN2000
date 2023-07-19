@@ -6,7 +6,7 @@
 #include "lpc24xx.h"
 
 
-void main() {
+int main() {
     printf("Hello, fellow team members\n");
     return 0;
 }
