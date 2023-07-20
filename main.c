@@ -8,6 +8,7 @@
 
 int main() {
     printf("Hello, fellow team members\n");
+    printf("This is alex adding to the main file");
     return 0;
 }
 
