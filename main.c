@@ -217,3 +217,4 @@ void algorithmn(struct manual_input manual_input, struct current *current) {
         }
     }
 }
+
