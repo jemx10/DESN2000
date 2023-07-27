@@ -69,5 +69,8 @@
 
 //will define struct for power on/off sound below
 int song_duration = (TBC); //depends on how many notes our tone has -> will play around with, hence the TBC
-struct tone sound_info[] = {
+struct tone off_sound[] = {
+}
+
+struct tone on_sound[] = {
 }
