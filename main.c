@@ -36,8 +36,11 @@ struct current {
     int blinds_manual_overide;
     int sunset;
     int sunrise;
-
 }
+
+// 1 clock - time of day -> modify scalar to show the project working in 
+// reduced time
+// 1 clock used to implement a sleep function e.g time between blind increments
 
 int main() {
     // A continious loop 
@@ -47,10 +50,14 @@ int main() {
     while (1) {
         // read the data from the light sensor
         // Itty
+        
+        // if (interupt happens)
+        // else we won't take in input from the data
         level_from_sensor(&current);
 
         // read the manual data from the LCD screen
         // Alex and Crystal
+        // if (fast interupt)
         level_from_LCD(&manual_input);
 
         // Pass in inputs 
@@ -58,22 +65,27 @@ int main() {
         // - manual input
         // Return 
         // - current 
+        // always runs :)
         algorithmn(manual_input, &current);
 
         // Change LCD screen 
         // Rob
+        // if there has been a change this will update
         lcd_output(current);
 
         // Change tri colour led
         // Alex and Crystal
+        // if there has been a change this will update
         tricolour_led_output(current);
 
         // Change LED ladder
         // James
+        // if there has been a change this will update
         led_ladder_output(current);
 
         // Sprinkler 
         // Maria 
+        // if the sprinkler timer turns on 
         sprinkler(current);
 
         // On/off sound?
