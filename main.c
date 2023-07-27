@@ -5,6 +5,9 @@
 #include <time.h>
 #include "lpc24xx.h"
 
+
+// Currently our data is in these structs but we might move it to a single 
+// integer with each feild contained within a bit
 struct manual_input {
     int brightness_up;
     int brightness_down;
@@ -62,7 +65,7 @@ int main() {
         lcd_output(current);
 
         // Change tri colour led
-        // Alex and Maria
+        // Alex and Crystal
         tricolour_led_output(current);
 
         // Change LED ladder
