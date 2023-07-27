@@ -5,7 +5,7 @@
  // Each note has three parts:
  // Duration, Pitch, Volume
 
- // Duration is 'unitless' and is scaled by the 'rate' value in main.c
+ // Duration is 'unitless' and is scaled by the 'rate' value in main.c (52000 in lab)
  // Pitch is the period of the note, in useconds.
  // Volume is from 0 to 0x3FF, off to fully on.
 
