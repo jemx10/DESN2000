@@ -68,3 +68,6 @@
 #define B3 		B4*2
 
 //will define struct for power on/off sound below
+int song_duration = (TBC); //depends on how many notes our tone has -> will play around with, hence the TBC
+struct tone sound_info[] = {
+}
