@@ -20,7 +20,7 @@ void udelay(unsigned int delay_in_us) {
         }
     }
 }
-
+//audio output function
 void play_tone(unsigned int duration, int period, int vol) {
     int times = duration/period;
     int i = 0;
