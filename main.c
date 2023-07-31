@@ -47,6 +47,8 @@ int main() {
     struct manual_input manual_input;
     struct current current;
 
+    setup()
+
     while (1) {
         // read the data from the light sensor
         // Itty
@@ -92,6 +94,47 @@ int main() {
     }
     return 0;
 }
+
+tricolour_led_output() {
+    // The LED lights will come on dependant on the light level
+    if (current->lights == 0) {
+        FIO3SET = 
+    } else if (current->lights == 1) {
+        FIO3SET = 
+    }
+}
+
+
+// ADC0.1
+light_sensor_level() {
+    /*
+    NEEDS TO GO INTO A SETUP FUNCTION???
+    AD0 control register
+    SEL [0:7] = 0x1
+    CLKDIV [15:8] = 0x46 (clock of 1Mhz)
+    [16:19] ???
+    Reserved [20] 
+    Power [21] = 0x1
+    Reserved [22:23]
+    Start [24:26] = 0x1
+    Reserved [27:31]
+    */
+    AD0CR = 
+    /*
+    AD0 Global data register
+    Result [6:15]
+    Done [31] 
+    This bit is set to 1 when an A/D conversion completes. It is cleared when this register is read and when the AD0CR is written.
+    If AD0CR is written while a conversion is still in progress, this bit is set and new conversion is started.
+
+    IS THIS HOW OUR INTERPUT WILL WORK?
+    if (bit 31 == 1) {
+        sample data
+    }
+    */
+    AD0GDR
+}
+
 
 /*
 Need to define increments/max values of brightness/lights/blinds
