@@ -1,5 +1,0 @@
-#include "lpc24xx.h"
-#include <stdio.h>
-
-void setup_ladder(void) {
-    FI02DIR 
