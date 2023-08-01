@@ -9,7 +9,7 @@ extern void play_tone(unsigned int duration, int period,  int vol);
 extern void setup_DAC(void);
 extern struct current current;
 
-int song_rate = (TBC);            //will play around with different values
+//int rate = (TBC);            //will play around with different values
 
 
 int i;
