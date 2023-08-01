@@ -16,6 +16,8 @@ int i;
 
 setup_DAC();
 
+//not sure how to make this edge triggered at the on/off signal
+
 if (current->on_off == 0) {
     for (i = 0; i < song_duration; i++) {
         play_tone(rate * on_sound[i].duration, on_sound[i].pitch, on_sound[i].volume);
