@@ -17,6 +17,7 @@ void touch_init(void)
     S0SPCR |= 0x093C;
     S0SPCCR |= 0x24;
 }
+	
 
 void touch_read_xy(char *x, char* y)
 {
@@ -24,9 +25,17 @@ void touch_read_xy(char *x, char* y)
 	*x = touch_read(0xD8);
 	//Read Y co-ordinate from the touch screen controller
 	*y = touch_read(0x98);
+	
+}
+//separate scaling func for x and y cos not sure how to differentiate between them conditionally lmao
+int scale_x(char *x) {
+	return x *240/255;
+}
+int scale_y(char *y) {
+	return y *320/255;
 }
 
-//
+//note pressure algorithm is x* (z_2/z_1 - 1), feel free to scale as you like
 void pressure_command(char* x, char *z_1, char *z_2) {
     *x = touch_read(0xD8);
     *z_1 = touch_read(0xB8);
