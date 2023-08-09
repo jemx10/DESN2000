@@ -66,10 +66,12 @@ void play_tone(unsigned int duration, int period,  int vol);
 void setup_DAC(void);
 
 int main() {
-
-    struct tone off_sound[]; 
-    struct tone on_sound[]; 
-    //int rate = ;            //experiment with different values
+    //note that duration is unitless and is scaled by 'rate'
+    //pitch is period in useconds (same as delay)
+    //volume ranges from 0 to 0x3FF
+    struct tone off_sound[] = {} 
+    struct tone on_sound[] = {}
+    int rate = ;            //experiment with different values
 
     int i;
 
