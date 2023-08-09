@@ -1,8 +1,11 @@
 #include "lpc24xx.h"
 #include "songs.h"
 
-struct tone off_sound[]; 
-struct tone on_sound[]; 
+struct tone {
+	int duration;
+	int pitch;
+	int volume;
+};
 int song_duration;
 void udelay(unsigned int delay_in_us);
 void play_tone(unsigned int duration, int period,  int vol);
@@ -10,6 +13,8 @@ void setup_DAC(void);
 
 int main() {
 
+    struct tone off_sound[]; 
+    struct tone on_sound[]; 
     //int rate = ;            //experiment with different values
 
     int i;
